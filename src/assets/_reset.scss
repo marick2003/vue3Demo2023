@@ -1,0 +1,221 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*{box-sizing: border-box;}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote {
+    &:before,
+    &:after {
+        content: "";
+        content: none;
+    }
+}
+
+q {
+    &:before,
+    &:after {
+        content: "";
+        content: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a{
+    text-decoration: none;
+}
+{
+    "UpdatedTime": "2023-06-17 16:09:01",
+    "OperatorName": "系统",
+    "LastBetTime": "2023-06-17 16:08:57",
+    "BetTarget": 2,
+    "PlayerStatus": 0,
+    "Balance": 9988562,
+    "WeChatNickname": "ma rick",
+    "SystemNickname": "ma rick",
+    "IsNicknameChanged": false,
+    "IsWeChatNicknameChanged": false,
+    "IsBalanceChanged": false,
+    "IsPlayerStatusChanged": false,
+    "IsLastBetTimeChanged": true
+}
+LA.track('Download_Windows_PC');
+
+LA.track('Download_Android_TV');
+LA.track('Download_Mac_OS');
+LA.track('Download_Android');
+LA.track('Download_iOS');
+function sortObject(obj, listSort) {
+    const sortedObj = {};
+    const sortedKeys = Object.keys(obj).sort((a, b) => {
+      const indexA = listSort.indexOf(a);
+      const indexB = listSort.indexOf(b);
+      if (indexA === -1) {
+        return 1;
+      } else if (indexB === -1) {
+        return -1;
+      } else {
+        return indexA - indexB;
+      }
+    });
+    for (const key of sortedKeys) {
+      sortedObj[key] = obj[key];
+    }
+    console.log(sortedObj);
+    return sortedObj;
+  }
+  
+  constㄌㄩ obj = {
+    "SystemNickname": "ma rick",
+    "WeChatNickname": "ma rick",
+    "Balance": 9988562,
+    "PlayerStatus": 0,
+    "BetTarget": 2,
+    "LastBetTime": "2023-06-17 16:08:57",
+    "IsNicknameChanged": false,
+    "IsWeChatNicknameChanged": false,
+    "IsBalanceChanged": false,
+    "IsPlayerStatusChanged": false,
+    "IsLastBetTimeChanged": true,
+    "OperatorName": "系统",
+    "UpdatedTime": "2023-06-17 16:09:01"
+  };
+  
+  const sortedObj = sortObject(obj, ['SystemNickname', 'WeChatNickname', 'Balance', 'BetTarget', 'PlayerStatus', 'OperatorName', 'UpdatedTime']);
+  console.log(sortedObj);
+
+
+  "MarketCategoryId": 0,
+  "Odds1": 0,
+  "Odds2": 0,
+  "Odds3": 0,
+  "Odds4": 0
+
+
+  console.log(val)
+  console.log(obj)
+  if(obj.MarketCategoryId<=8){
+      retur
+  }
+  !$v.editOddsInfoList.$each[index]['Odds1'].decimal || !$v.editOddsInfoList.$each[index]['Odds2'].decimal || !$v.editOddsInfoList.$each[index]['Odds3'].decimal|| !$v.editOddsInfoList.$each[index]['Odds4'].decimal
