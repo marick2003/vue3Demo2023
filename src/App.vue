@@ -9,6 +9,7 @@
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/test">Test</RouterLink>
       </nav>
       <nav>
         <select v-model="locale">
@@ -26,7 +27,7 @@
     </div>
   </header>
     
-  <RouterView />
+  <RouterView  @imageloaded="someHandler"/>
 </template>
 <script>
 import { RouterLink, RouterView } from 'vue-router'
@@ -34,6 +35,8 @@ import HelloWorld from './components/HelloWorld.vue'
 import { GenerateBets } from '@/assets/lib/kuaiyi.js';
 import { watch } from "vue";
 import { useI18n } from "vue-i18n";
+
+
   export default {
    
     mounted(){
@@ -73,6 +76,9 @@ import { useI18n } from "vue-i18n";
       var regex2 = /(\S)\s(\S)/g;
       var newStr2 = newStr.replace(regex2, '$1,$2');
       return newStr2;
+    },
+    someHandler(value){
+      console.log(value);
     }
   },
   components:{
