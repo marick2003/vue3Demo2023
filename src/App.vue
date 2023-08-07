@@ -8,6 +8,7 @@
       <HelloWorld msg="You did it!" />
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/test">Test</RouterLink>
       </nav>
@@ -27,7 +28,9 @@
     </div>
   </header>
     
-  <RouterView  @imageloaded="someHandler"/>
+  <RouterView  @imageloaded="someHandler"></RouterView>
+  <RouterView name="LeftSidebar" class=""></RouterView>
+
 </template>
 <script>
 import { RouterLink, RouterView } from 'vue-router'
