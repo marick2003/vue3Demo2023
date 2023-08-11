@@ -4,11 +4,17 @@
       <input :style="'display:none'" ref="EventfileInput" @change="onEventFilePicked" type="file" name="upload" accept="image/*" />
       <q-img class="w-30 h-30" :src="imageUrl" />
     </div>
+    <MyTable :tableHeads="tableHeads" :tableBody="tableBody">
+      <template #ithelpLink="{ index, props, value }">
+          <a :href="tableBody[index].ithelpLink" target="_blank"> 查看 </a>
+      </template>
+    </MyTable>
 </template>
 
 <script>
-
+import MyTable from '../components/MyTable.vue'
 import { defineComponent, ref } from 'vue'
+
 
 export default defineComponent({
   name: 'FileUpload',
@@ -16,7 +22,34 @@ export default defineComponent({
   setup (props, { emit }) {
       const imageUrl = ref('');
       const EventfileInput = ref(null);
-        
+      //原本的，練習用
+      const tableHeads = ref(['姓名', '主題', '備註', '查看'])
+      const tableBody = ref([
+        {
+          name: 'Angela',
+          topic: '真的好想離開 Vue 3 新手村',
+          note: 'Composition API',
+          ithelpLink: 'https://ithelp.ithome.com.tw/users/20152606/ironman/5782',
+        },
+        {
+          name: '阿傑',
+          topic: '咩色用得好，歸剛沒煩惱',
+          note: '從 ECMAScript 偷窺 JavaScript Array method',
+          ithelpLink: 'https://ithelp.ithome.com.tw/users/20152459/ironman/5744',
+        },
+        {
+          name: 'Jade',
+          topic: '前端蛇行撞牆記',
+          note: '無',
+          ithelpLink: 'https://ithelp.ithome.com.tw/users/20152424/articles',
+        },
+        {
+          name: 'Vic',
+          topic: 'JavaScript 之路，往前邁進吧！',
+          note: '未來會成為JS大師的人。',
+          ithelpLink: 'https://ithelp.ithome.com.tw/users/20151114/ironman/5425',
+        },
+      ])
       const onEventFilePicked = (event) => {
           const files = event.target.files
           const image = files[0]
@@ -43,8 +76,12 @@ export default defineComponent({
           imageUrl,
           sendEventImage,
           onEventFilePicked,
-          EventfileInput
+          EventfileInput,
+          tableHeads,
+          tableBody
       }
+  },components:{
+    MyTable,
   }
 })
 </script>

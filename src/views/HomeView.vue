@@ -16,7 +16,7 @@
 
 <script>
 import { ref, reactive, provide } from "vue";
-import TheWelcome from '../components/TheWelcome.vue'
+import TheWelcome from '../components/TheWelcome.vue';
 import Counter from '../components/Counter.vue';
 import Child from '../components/Child.vue'
 export default {
@@ -35,6 +35,7 @@ export default {
   components:{
     Counter:Counter,
     Child,
+    TheWelcome
   }
 };
 </script>
