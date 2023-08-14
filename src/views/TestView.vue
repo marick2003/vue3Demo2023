@@ -4,14 +4,17 @@
       <input :style="'display:none'" ref="EventfileInput" @change="onEventFilePicked" type="file" name="upload" accept="image/*" />
       <q-img class="w-30 h-30" :src="imageUrl" />
     </div>
+    <SuspenseTestItem > </SuspenseTestItem>
     <MyTable :tableHeads="tableHeads" :tableBody="tableBody">
       <template #ithelpLink="{ index, props, value }">
           <a :href="tableBody[index].ithelpLink" target="_blank"> 查看 </a>
       </template>
     </MyTable>
+    
 </template>
 
 <script>
+import SuspenseTestItem from '../components/Suspense.vue';
 import MyTable from '../components/MyTable.vue'
 import { defineComponent, ref } from 'vue'
 
@@ -82,6 +85,7 @@ export default defineComponent({
       }
   },components:{
     MyTable,
+    SuspenseTestItem,
   }
 })
 </script>

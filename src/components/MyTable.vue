@@ -24,7 +24,7 @@
 <script>
 import { useSlots } from 'vue'
 export default{
-    props:['tableHeads','tableBody'],
+    props:['tableHeads','tableBody'], 
     setup(props) {
         const slots = useSlots()
         return {slots,props}
